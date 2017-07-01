@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>ServiceWorker Registration</title>
+    <style type="text/css">
+      .danger {
+        color: red;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="description">
+      <h1>ServiceWorker Registration</h1>
+      <p>
+        Displays the lifecycle of the requests in ServiceWorker and how they are managed.
+        Whether the installation is completed or not and if the requests are being handled
+        by the service worker.
+
+        Additional knowledge about the interface can be useful.
+      </p>
+    </div>
+    <div class="serviceworker">
+      <div id="availability">Service worker is <b><span id="available"></span></b></div>
+      
+      <div class="serviceworker-registration">
+        <h1>ServiceWorker Registration related details</h1>
+        <div id="scopePlace">Scope of the ServiceWorker is <span id="scope"></span></div>
+        <div id="registration"></div>
+        <div id="controlled"></div>
+        <div id="serviceWorkerState">ServiceWorker is <span id="state"></span></div>
+        <div id="all-states">
+          <h2>All ServiceWorker States</h2>
+          <ul id="serviceworker-states"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

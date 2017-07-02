@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>ServiceWorker Font Caching</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Fresca|Indie+Flower|Lobster|Rationale" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Alegreya|Archivo+Narrow|Average|Bree+Serif|Catamaran|Cuprum|Dancing+Script|EB+Garamond|Exo+2|Francois+One|Play|Questrial" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selective Font Caching</h1>
+      <h2>Caches only the fonts selectively, by searching for the appropriate requests needed</h2>
+      <div id="caching-complete">
+        <h4>Caching Complete!</h4>
+        <p>Future visits to this website will be available offline</p>
+        <img src="tada.png" alt="">
+      </div>
+      <div id="fonts">
+        <div id="fonts-text"></div> 
+      </div>
+      <script src="main.js"></script>
+    </div>
+  </body>
+</html>

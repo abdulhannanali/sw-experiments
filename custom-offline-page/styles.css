@@ -1,0 +1,43 @@
+.web-power {
+  margin: auto;
+  text-align: center;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.web-head {
+  font-style: italic;
+  color: palegoldenrod;
+  text-shadow: 2px 2px 3px green;
+}
+
+.web-description {
+  font-family: monospace;
+}
+
+span.danger-text {
+  color: red;
+  text-decoration: line-through;
+  font-size: 34px;
+}
+
+a.dinosaur-link {
+  text-decoration: none;
+  color: green;
+  border-bottom: 3px greenyellow dashed;
+  font-size: 24px;
+}
+
+.image-link {
+  border: 10px transparent solid;
+  border-radius: 300px;
+  width: 400px;
+  height: 400px;
+}
+
+.image-link:hover {
+  border: 10px green solid;
+}
+
+h4 {
+  font-size: 30px;
+}

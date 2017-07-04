@@ -32,7 +32,7 @@ function mockWeatherResponse(request) {
 
   const tempResponse = {
     unit: '°C',
-    temperature: randomNumberInRange(32, 44),
+    temperature: randomNumberInRange(0, 44),
     location: weatherLocation,
   }
 

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Mock Responses using a ServiceWorker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Mock Response API</h1>
+            <p>
+                This demo uses ServiceWorker to mock responses for an API.
+                ServiceWorker acts as a network proxy, and therefore can be 
+                used to get fixed mock responses, to respond with.
+
+                This uses a special header known as <code>X-Mock-Response</code>
+                in order to instruct the ServiceWorker whether to send the request
+                to the network or return a mock response.
+            </p>
+            <h3>Mock Weather API</h3>
+            <p>
+                This demo implements a Mock Weather API in order to provide us with fake
+                weather information in response to requests, making testing of client side
+                applications a lot easier and faster to develop front end applications,
+                with no third party bandwidth usage. That's a yayyy for you and your company.
+            </p>
+        </div>
+        <div class="api-response-body">
+            <div class="api-input">
+                <input type="text" placeholder="Location" id="location-input">
+                <button id="send-request">Send Weather Request</button>
+            </div>
+            <div class="request-url">
+                <h3>Request URL</h3>
+                <p>Updates when you send a weather request</p>
+                <p>
+                    Because of it being a Mock API, a random response within a fixed range is returned
+                    everytime a request is sent.
+                </p>
+                <code>
+                    https://fabulousweather.online/?location=<span class="location">Cambridge</span>
+                </code>
+            </div>
+            <div class="response">
+                <h3>Location: </h3><span id="response-location"></span>
+                <h3>Temperature: </h3><span id="response-temperature"></span>
+            </div>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

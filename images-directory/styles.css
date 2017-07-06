@@ -1,0 +1,22 @@
+.button-controls {
+  margin-top: 10px;
+}
+
+.image-thumb {
+  width: 80px;
+  border: 1px black solid;
+  margin: 20px;
+}
+
+.no-images {
+  margin: 20px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  opacity: 0.8;
+}
+
+#images-list {
+  background-color: grey;
+  border-radius: 10px;
+}

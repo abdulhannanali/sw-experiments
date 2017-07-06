@@ -8,6 +8,19 @@ const mainFiles = ['/', '/styles.css', '/main.js', '/favicon.ico'];
 self.addEventListener('install', function (installEvent) {
   const cachedResources = self.caches.open(MAIN_CACHE).then(cache => {
     return cache.addAll(mainFiles);
+  }).then(function () {
+    // Caching complete message sent to all the ServiceWorkers
+    // including uncontrolled and of all types
+    self.clients.matchAll({
+      includeUncontrolled: true,
+      type: 'all',
+    }).then(matchedClients => {
+      return Promise.all(
+        matchedClients.map(client => {
+          return client.postMessage('Installation for the Cache Complete');
+        })
+      );
+    });
   });
 
   installEvent.waitUntil(cachedResources);
@@ -98,4 +111,14 @@ function fetchImage(url) {
       throw new TypeError('Image is not of the expected type');
     }
   });
+}
+
+function cachingComplete() {
+  self.clients.matchAll().then(matchedClients => {
+    const sentMessages = matchedClients.map(client => {
+      return client.postMessage('ServiceWorker has cached the resources required to run the application');
+    });
+
+    return Promise.all(sentMessages);
+  })
 }

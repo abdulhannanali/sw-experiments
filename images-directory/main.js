@@ -128,6 +128,11 @@
   }
 
   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.onmessage = function (event) {
+      console.log('Message received from the service worker');
+      console.log('Date received: ' + event.data);
+    };
+
     navigator.serviceWorker.register('./service-worker.js')
       .then(function () {
         console.log('ServiceWorker has registered');

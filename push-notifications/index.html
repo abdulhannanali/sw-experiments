@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Push Notiifications</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="layout-header">
+      <span class="header-text">Push Notifications on Web</span>
+      <div class="images-list">
+        <img src="push.png" alt="Push Notifications on Mobile image" class="image">
+        <img src="firebase.png" alt="Firebase logo" class="image">
+      </div>
+    </header>
+    <div class="container">
+      <div class="description">
+        This contrived example of Push Notification is built
+        by going through <a href="https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/">Adding Push Notifications to Web App</a>
+        from <a href="https://developers.google.com/web/fundamentals">Google Web Fundamentals</a>
+      </div>
+      <div class="enable-messaging">
+        <button id="push" href="#" class="material-button push-button" disabled>Enable Push Messaging</button>
+      </div>
+      <div class="push-subscription is-invisible">
+        <div class="head">Details of the Push Subscription</div>
+        <div class="details json">{"hello": "world"}</div>
+      </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
